@@ -86,7 +86,6 @@ header {
 */
 footer {
     width: auto;
-    height: 200px;
     background-color: #151B23;
     align-self: stretch;
     padding: 40px max(calc(50vw - 560px), 40px) 40px;
