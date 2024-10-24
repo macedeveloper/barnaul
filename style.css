@@ -1,0 +1,172 @@
+/*
+    MAIN
+*/
+* {
+    /* Sizes */
+    margin: 0;
+    padding: 0;
+
+    /* Fonts */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    hyphens: auto;
+}
+
+body {
+    background: #0D1117;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 96px;
+    font-weight: bolder;
+}
+h2 {
+    font-size: 40px;
+}
+a {
+    color: #328bff;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+
+
+/*
+    HEADER
+*/
+header {
+    min-height: 80px;
+    background-color: #151B23;
+    user-select: none;
+
+    /* Auto layout */
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    /* Inside auto layout */
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.header-side {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex: none;
+    height: 80px;
+    margin: 0 20px;
+}
+
+
+
+/*
+    FOOTER
+*/
+footer {
+    width: auto;
+    height: 200px;
+    background-color: #151B23;
+    align-self: stretch;
+    padding: 40px max(calc(50vw - 560px), 40px) 40px;
+}
+
+
+/*
+    HERO
+*/
+div.hero {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 200px 20px;
+    gap: 10px;
+
+    width: auto;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://a.d-cd.net/oxAToaJKUIG9wBC4321mPEoYdUE-960.jpg);
+    background-size: cover;
+    background-position: center;
+
+    /* Inside auto layout */
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    text-align: center;
+
+}
+
+.hero-text {
+        /* Inside auto layout */
+        flex: none;
+        order: 2;
+        align-self: stretch;
+        flex-grow: 0;
+}
+
+
+
+/*
+    SECTION: INFO
+*/
+/* Section Info */
+section.section-info {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 0px;
+    gap: 40px;
+
+    /* Inside auto layout */
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+div.post {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+    gap: 20px;
+
+    /* Inside auto layout */
+    align-self: stretch;
+}
+img.in-post {
+    width: 550px; height: 320px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+p.in-post {
+    width: 550px;
+}
