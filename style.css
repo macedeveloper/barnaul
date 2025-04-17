@@ -15,6 +15,10 @@
     hyphens: auto;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background: #0D1117;
 
@@ -27,7 +31,7 @@ body {
 }
 
 h1 {
-    font-size: 96px;
+    font-size: 72px;
     font-weight: bolder;
 }
 h2 {
@@ -53,11 +57,9 @@ header {
 
     /* Auto layout */
     display: flex;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     align-content: flex-start;
     padding: 0px;
     gap: 20px;
@@ -73,10 +75,25 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     flex: none;
     height: 80px;
     margin: 0 20px;
+}
+.header-side a {
+    color: white;
+}
+.header-side-btn {
+    background-color: #0d1117;
+    padding: 0 20px;
+    margin: 0;
+    transition: background-color 0.2s;
+    flex-grow: 1;
+    text-align: center;
+}
+.header-side-btn:hover {
+    background-color: #212830;
 }
 
 
@@ -107,7 +124,7 @@ div.hero {
 
     width: auto;
 
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://a.d-cd.net/oxAToaJKUIG9wBC4321mPEoYdUE-960.jpg);
+    background: linear-gradient(#00000044, #0d1117ff), url('/images/bridgerev.webp');
     background-size: cover;
     background-position: center;
 
@@ -125,6 +142,9 @@ div.hero {
         order: 2;
         align-self: stretch;
         flex-grow: 0;
+        text-shadow:
+            0 8px 16px #000b,
+            0 0 2px #000f;
 }
 
 
@@ -168,4 +188,28 @@ img.in-post {
 }
 p.in-post {
     width: 550px;
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    transform-origin: bottom center;
+    text-decoration: none !important;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
 }
