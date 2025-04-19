@@ -124,7 +124,7 @@ div.hero {
 
     width: auto;
 
-    background: linear-gradient(#00000044, #0d1117ff), url('/images/bridgerev.webp');
+    background: linear-gradient(#00000044, #0d1117ff), url('images/bridgerev.webp');
     background-size: cover;
     background-position: center;
 
