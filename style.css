@@ -9,13 +9,15 @@
     /* Fonts */
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 24px;
     color: #FFFFFF;
-    hyphens: auto;
+
+    scrollbar-color: #f0f6fc #0D1117;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -34,17 +36,32 @@ h1 {
     font-size: 72px;
     font-weight: bolder;
 }
+
 h2 {
     font-size: 40px;
+    width: 100%;
 }
+
 a {
-    color: #328bff;
+    color: #35A2FF;
     text-decoration: none;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
     text-decoration: underline;
 }
 
+
+hr {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    /* border: 2px solid #151b23; */
+    height: 2px;
+    border-width: 0;
+    color: #151b23;
+}
 
 
 /*
@@ -81,9 +98,11 @@ header {
     height: 80px;
     margin: 0 20px;
 }
+
 .header-side a {
     color: white;
 }
+
 .header-side-btn {
     background-color: #0d1117;
     padding: 0 20px;
@@ -92,6 +111,7 @@ header {
     flex-grow: 1;
     text-align: center;
 }
+
 .header-side-btn:hover {
     background-color: #212830;
 }
@@ -112,7 +132,7 @@ footer {
 /*
     HERO
 */
-div.hero {
+.hero {
     /* Auto layout */
     display: flex;
     flex-direction: column;
@@ -134,17 +154,18 @@ div.hero {
     flex-grow: 0;
     text-align: center;
 
+    hyphens: auto;
 }
 
 .hero-text {
-        /* Inside auto layout */
-        flex: none;
-        order: 2;
-        align-self: stretch;
-        flex-grow: 0;
-        text-shadow:
-            0 8px 16px #000b,
-            0 0 2px #000f;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    text-shadow:
+        0 8px 16px #000b,
+        0 0 2px #000f;
 }
 
 
@@ -181,24 +202,27 @@ div.post {
     /* Inside auto layout */
     align-self: stretch;
 }
+
 img.in-post {
-    width: 550px; height: 320px;
+    width: 550px;
+    height: 320px;
     border-radius: 12px;
     object-fit: cover;
 }
+
 p.in-post {
     width: 550px;
 }
 
 
-.hover-underline-animation {
+.hover-underline-animation, .hover-underline-animation-blue {
     display: inline-block;
     position: relative;
     transform-origin: bottom center;
     text-decoration: none !important;
 }
 
-.hover-underline-animation::after {
+.hover-underline-animation::after, .hover-underline-animation-blue::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -206,10 +230,16 @@ p.in-post {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fff;
     transition: transform 0.25s ease-out;
 }
 
-.hover-underline-animation:hover::after {
+.hover-underline-animation::after {
+    background-color: white;
+}
+.hover-underline-animation-blue::after {
+    background-color: #35A2FF;
+}
+
+.hover-underline-animation:hover::after, .hover-underline-animation-blue:hover::after {
     transform: scaleX(1);
 }
